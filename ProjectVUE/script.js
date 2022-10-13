@@ -8,10 +8,10 @@ const DataFromJSON = {
 	}
   },
   created() {
-	fetch('https://raw.githubusercontent.com/sopent/test/main/data.json')
+	fetch(https://raw.githubusercontent.com/Aleksandra-Aleksandrovna-K/Files/main/ProjectVUE/data.json)
 		.then(response => response.json())
 		.then(result => this.dataJSON1=result)
-	fetch('https://raw.githubusercontent.com/sopent/test/main/data2.json')
+	fetch(https://raw.githubusercontent.com/Aleksandra-Aleksandrovna-K/Files/main/ProjectVUE/data.json)
 		.then(response => response.json())
 		.then(result => this.dataJSON2=result)
   },
