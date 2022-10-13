@@ -1,5 +1,5 @@
 h1 {
-  color: red;
+	color: red;
 }
 
 	
@@ -10,5 +10,32 @@ td{
 	
 	
 tr:hover {
-  background-color: lightgray;
+	background-color: lightgray;
+}
+
+#container {
+	display: flex;
+}
+
+#CityJSON {
+	width: 200px;
+}
+
+#InfoJSON {
+	display: flex;
+	width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#Info {
+    width: 100%;
+    padding: 8px;
+	background-color: lightblue;
+}
+
+#Button {
+    width: 50px;
+    padding: 8px;
+	background-color: lightblue;
 }

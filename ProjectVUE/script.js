@@ -3,25 +3,37 @@
 const DataFromJSON = {
   data() {
 	return {
-		dataJSON1: {},
-		dataJSON2: {}
+		dataJSON: [],
+		showInfo: false,
+		info: []
 	}
   },
   created() {
-	fetch(https://raw.githubusercontent.com/Aleksandra-Aleksandrovna-K/Files/main/ProjectVUE/data.json)
+	fetch("https://raw.githubusercontent.com/Aleksandra-Aleksandrovna-K/Files/main/ProjectVUE/data.json")
 		.then(response => response.json())
-		.then(result => this.dataJSON1=result)
-	fetch(https://raw.githubusercontent.com/Aleksandra-Aleksandrovna-K/Files/main/ProjectVUE/data.json)
-		.then(response => response.json())
-		.then(result => this.dataJSON2=result)
+		.then(result => this.dataJSON=result)
+
   },
-	methods:{
-		onHover: event => event.target.style.backgroundColor = 'gray',
-		outHover: event => event.target.style.backgroundColor = 'white'
-	}
+   methods: {
+		getInfo(n) {
+			this.showInfo = true;
+			this.info = n.info
+		},
+		closeInfo() {
+			this.showInfo = false
+		}	
+   }
+
+
+
+// выделение строк через VUE  
+//	methods:{
+//		onHover: event => event.target.style.backgroundColor = 'gray',
+//		outHover: event => event.target.style.backgroundColor = 'white'
+//	}
 		
 		
   
 }
 
-Vue.createApp(DataFromJSON).mount('#data1')
+Vue.createApp(DataFromJSON).mount('#container')

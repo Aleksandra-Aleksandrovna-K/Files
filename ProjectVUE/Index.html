@@ -12,42 +12,44 @@
     <h1>Заголовок</h1>
 
 
-<div id="data1">
+<div id="container">
+
+	<div id="CityJSON">
+	
+	<table>
+	<tr  v-for="n in dataJSON" key="n.city">
+		<td v-on:click="getInfo(n)">
+			{{ n.city }}
+		</td>
+	</tr>
+	</table>
+    </div>
+	
+	
+	<div id="InfoJSON" v-if="showInfo">
+		<div id="Info">
+			{{ info }}
+		</div>
+		<div id="Button">
+			<button type="button" id="CloseButton" v-on:click="closeInfo">
+				Close
+			</button>
+		</div>
+	</div>
+	
+
+<!-- выделение строк через VUE  -->
+  <!-- <ol> -->
+    <!-- <li v-for="value in dataJSON" v-on:mouseover="onHover" v-on:mouseout="outHover"> -->
+      <!-- {{ value }} -->
+    <!-- </li> -->
+  <!-- </ol> -->
 
 
-
-<table>
-  <tr  v-for="value in dataJSON1">
-    <td>
-		{{ value }}
-	</td>
-  </tr>
-</table>
-
-
-
-  <ol>
-    <li v-for="value in dataJSON1" v-on:mouseover="onHover" v-on:mouseout="outHover">
-      {{ value }}
-    </li>
-  </ol>
-  
-  <ol>
-    <li v-for="(name, value) in dataJSON2" v-on:mouseover="onHover" v-on:mouseout="outHover">
-       {{ value }} - {{ name }}
-    </li>
-  </ol>
-  
-  
 </div>
 
-	
-	
-	
-	
-	
-
 <script type="text/javascript" src="script.js"></script>
+
 
 </body>
 
