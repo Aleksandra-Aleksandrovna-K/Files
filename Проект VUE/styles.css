@@ -1,0 +1,14 @@
+h1 {
+  color: red;
+}
+
+	
+td{
+	padding: 8px;
+	cursor: pointer;
+}
+	
+	
+tr:hover {
+  background-color: lightgray;
+}

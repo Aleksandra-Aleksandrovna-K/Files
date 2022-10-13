@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Проект VUE</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+
+    <h1>Заголовок</h1>
+
+
+<div id="data1">
+
+
+
+<table>
+  <tr  v-for="value in dataJSON1">
+    <td>
+		{{ value }}
+	</td>
+  </tr>
+</table>
+
+
+
+  <ol>
+    <li v-for="value in dataJSON1" v-on:mouseover="onHover" v-on:mouseout="outHover">
+      {{ value }}
+    </li>
+  </ol>
+  
+  <ol>
+    <li v-for="(name, value) in dataJSON2" v-on:mouseover="onHover" v-on:mouseout="outHover">
+       {{ value }} - {{ name }}
+    </li>
+  </ol>
+  
+  
+</div>
+
+	
+	
+	
+	
+	
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
